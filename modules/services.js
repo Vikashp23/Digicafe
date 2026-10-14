@@ -14,6 +14,14 @@ const SERVICES = [
   {icon:'🎯', name:'GST Compliance Filing', price:'1999', category:'gst'},
   {icon:'📑', name:'Business Registration', price:'3999', category:'company'},
   {icon:'💼', name:'Business Consultation', price:'2999', category:'consulting'},
+  {icon:'🧾', name:'GST Returns & Reconciliation', price:null, category:'gst'},
+  {icon:'📚', name:'Bookkeeping & Monthly Accounts', price:null, category:'accounting'},
+  {icon:'🏛️', name:'MCA / ROC Annual Compliance', price:null, category:'company'},
+  {icon:'🧮', name:'TDS / TCS Returns & Support', price:null, category:'tax'},
+  {icon:'👥', name:'Payroll & HR Support', price:null, category:'payroll'},
+  {icon:'⚖️', name:'Labour Compliance Assistance', price:null, category:'compliance'},
+  {icon:'🗂️', name:'LLP Compliance & Filings', price:null, category:'company'},
+  {icon:'🧾', name:'Accounting Reconciliation Support', price:null, category:'accounting'},
 ];
 
 /* RENDER SERVICES TO ELEMENT */
@@ -38,7 +46,7 @@ function renderServices(containerSelector, filter = null) {
         ${service.name}
       </h3>
       <div class="service-price" style="color: var(--gold); font-weight: 600; margin-bottom: 1rem;">
-        ₹${service.price}+
+        ${service.price ? `₹${service.price}+` : 'Contact for a quote'}
       </div>
       <button class="btn btn-primary btn-small w-100" onclick="selectService('${service.name}')">
         Request Service
