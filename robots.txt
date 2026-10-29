@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vikashp23.github.io/digicafe/sitemap.xml
+Sitemap: https://vikashp23.github.io/Digicafe/sitemap.xml
