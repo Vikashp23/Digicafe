@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore career opportunities and submit your resume to DigiCafe.">
+  <meta name="theme-color" content="#08152b">
+  <title>Careers at DigiCafe | Apply Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    :root{--bg:#07111f;--panel:#101f33;--panel2:#142740;--line:rgba(255,255,255,.12);--text:#edf4ff;--muted:#a8b7cc;--blue:#4f8cff;--teal:#13c6a2;--red:#ff7777}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,rgba(42,101,184,.22),transparent 42%),var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 32px));margin:auto}.topbar{border-bottom:1px solid var(--line);background:rgba(7,17,31,.88);position:sticky;top:0;z-index:10;backdrop-filter:blur(14px)}
+    .nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-size:1.2rem;font-weight:900;text-decoration:none;letter-spacing:-.04em}.brand span{color:var(--teal)}.navlinks{display:flex;gap:18px;align-items:center}.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:white}
+    .hero{padding:68px 0 42px;text-align:center}.eyebrow{display:inline-flex;padding:6px 12px;border:1px solid rgba(19,198,162,.35);border-radius:99px;color:#71e5cd;background:rgba(19,198,162,.08);font-size:.78rem;font-weight:700;letter-spacing:.04em}
+    h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.12;letter-spacing:-.05em;margin:18px auto 14px;max-width:800px}.grad{background:linear-gradient(100deg,#72a8ff,#48dfc1);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:700px;margin:0 auto;color:var(--muted);font-size:1.02rem}.layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px;align-items:start;padding-bottom:70px}
+    .panel{background:linear-gradient(160deg,rgba(20,39,64,.96),rgba(13,28,47,.96));border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:0 18px 55px rgba(0,0,0,.18)}
+    h2{font-size:1.25rem;margin:0 0 8px}.sub{color:var(--muted);font-size:.88rem;margin:0 0 20px}
+    .role{padding:16px 0;border-top:1px solid var(--line)}.role:first-of-type{border-top:0}.role h3{font-size:.98rem;margin:0 0 5px}.role p{font-size:.83rem;color:var(--muted);margin:0 0 10px}
+    .tag{display:inline-block;font-size:.72rem;padding:4px 9px;border-radius:99px;background:rgba(79,140,255,.14);color:#a9c7ff;margin:2px 4px 2px 0}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}label{font-size:.8rem;font-weight:700;color:#d6e2f2}
+    input,select,textarea{width:100%;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:#091729;color:var(--text);padding:12px 13px;font:inherit;font-size:.9rem;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(79,140,255,.14)}select option{background:#10233a}textarea{min-height:92px;resize:vertical}
+    input[type=file]{padding:10px;background:#091729}input[type=file]::file-selector-button{border:0;border-radius:7px;padding:8px 10px;margin-right:10px;background:#203a5c;color:white;cursor:pointer}
+    .hint{font-size:.74rem;color:var(--muted)}.consent{display:flex;gap:9px;align-items:flex-start;color:var(--muted);font-size:.78rem}.consent input{width:auto;margin-top:4px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:11px;background:linear-gradient(110deg,var(--blue),#286bd7);color:white;padding:13px 19px;font-weight:800;font-size:.9rem;cursor:pointer;text-decoration:none}.btn:disabled{opacity:.6;cursor:wait}.btn.full{width:100%;margin-top:16px}
+    .notice{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;font-size:.85rem}.notice.ok{display:block;background:rgba(19,198,162,.12);border:1px solid rgba(19,198,162,.35);color:#8ff0da}.notice.err{display:block;background:rgba(255,119,119,.1);border:1px solid rgba(255,119,119,.3);color:#ffaaaa}
+    .privacy{font-size:.75rem;color:var(--muted);margin-top:14px}.footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:.8rem}.footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:820px){.layout{grid-template-columns:1fr}.hero{padding-top:48px}.panel{padding:20px}}@media(max-width:540px){.grid{grid-template-columns:1fr}.field.full{grid-column:auto}.navlinks{gap:10px}.navlinks a{font-size:.78rem}.hero p{font-size:.92rem}}
+  </style>
+</head>
+<body>
+  <header class="topbar"><div class="wrap nav">
+    <a class="brand" href="index.html">Digi<span>Cafe</span></a>
+    <div class="navlinks"><a href="index.html">Home</a><a href="index.html#dac-career">Career Assistance</a><a href="https://wa.me/918539979271" target="_blank" rel="noopener">Contact</a></div>
+  </div></header>
+
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow"><i class="fa-solid fa-briefcase"></i>&nbsp; DIGICAFE CAREERS</span>
+      <h1>Build your next step with <span class="grad">DigiCafe</span></h1>
+      <p>We welcome applications from people interested in accounting, taxation, business development, digital marketing and operations. Submit your profile and resume for current or future opportunities.</p>
+    </section>
+
+    <section class="layout">
+      <aside class="panel">
+        <h2>Areas of opportunity</h2>
+        <p class="sub">Role availability and working terms will be confirmed during the selection process.</p>
+        <div class="role">
+          <h3>Marketing &amp; Business Development Associate</h3>
+          <p>Client outreach, lead generation, follow-ups and business promotion.</p>
+          <span class="tag">Remote</span><span class="tag">Part-time</span><span class="tag">2 hours/day may be available</span>
+        </div>
+        <div class="role">
+          <h3>Accounts &amp; GST Assistant</h3>
+          <p>Accounting support, Excel work, GST documentation and client coordination.</p>
+          <span class="tag">Remote / Flexible</span><span class="tag">Part-time opportunities</span>
+        </div>
+        <div class="role">
+          <h3>Digital Marketing Intern</h3>
+          <p>Content planning, social media updates and digital campaign support.</p>
+          <span class="tag">Remote</span><span class="tag">Internship</span>
+        </div>
+        <div class="role">
+          <h3>General Application</h3>
+          <p>Share your resume for future roles that match your skills and experience.</p>
+          <span class="tag">Future opportunities</span>
+        </div>
+        <p class="privacy">Submitting an application does not guarantee an interview, selection or employment. DigiCafe will contact shortlisted applicants when a suitable opportunity is available.</p>
+      </aside>
+
+      <section class="panel">
+        <h2>Submit your application</h2>
+        <p class="sub">Complete the form and attach your latest resume. All fields marked * are required.</p>
+        <form id="career-form">
+          <div class="grid">
+            <div class="field"><label for="fullName">Full name *</label><input id="fullName" name="fullName" maxlength="100" required autocomplete="name" placeholder="Your full name"></div>
+            <div class="field"><label for="mobile">Mobile number *</label><input id="mobile" name="mobile" type="tel" maxlength="20" required autocomplete="tel" placeholder="+91 98765 43210"></div>
+            <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" maxlength="120" required autocomplete="email" placeholder="you@example.com"></div>
+            <div class="field"><label for="city">Current city *</label><input id="city" name="city" maxlength="80" required placeholder="City"></div>
+            <div class="field"><label for="state">State *</label><input id="state" name="state" maxlength="80" required placeholder="State"></div>
+            <div class="field"><label for="qualification">Highest qualification *</label><input id="qualification" name="qualification" maxlength="120" required placeholder="e.g. MBA, B.Com, M.Com"></div>
+            <div class="field"><label for="experience">Work experience *</label><select id="experience" name="experience" required><option value="">Select experience</option><option>Fresher</option><option>Less than 1 year</option><option>1–2 years</option><option>3–5 years</option><option>6–8 years</option><option>More than 8 years</option></select></div>
+            <div class="field"><label for="position">Position applying for *</label><select id="position" name="position" required><option value="">Select position</option><option>Marketing &amp; Business Development Associate</option><option>Accounts &amp; GST Assistant</option><option>Digital Marketing Intern</option><option>General Application / Future Opportunities</option></select></div>
+            <div class="field"><label for="workMode">Preferred work arrangement *</label><select id="workMode" name="workMode" required><option value="">Select preference</option><option>Remote</option><option>Hybrid</option><option>On-site</option><option>Flexible / Any</option></select></div>
+            <div class="field"><label for="hours">Availability</label><select id="hours" name="hours"><option value="">Select availability</option><option>2 hours/day</option><option>3–4 hours/day</option><option>Part-time</option><option>Full-time</option><option>Flexible</option></select></div>
+            <div class="field"><label for="salary">Expected monthly salary (₹)</label><input id="salary" name="salary" maxlength="30" placeholder="e.g. 5000 / Negotiable"></div>
+            <div class="field"><label for="notice">Notice period / joining availability</label><input id="notice" name="notice" maxlength="80" placeholder="Immediate / 15 days / 30 days"></div>
+            <div class="field full"><label for="introduction">Brief introduction / relevant skills</label><textarea id="introduction" name="introduction" maxlength="1000" placeholder="Tell us about your skills, experience and why you are interested in DigiCafe."></textarea></div>
+            <div class="field full"><label for="resume">Upload resume * (PDF or DOC/DOCX, maximum 5 MB)</label><input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required><span class="hint">Use a clear, updated resume. Do not upload Aadhaar, PAN or other identity documents.</span></div>
+            <div class="field full"><label class="consent"><input id="consent" type="checkbox" required><span>I confirm that the information provided is accurate and consent to DigiCafe using my application details and resume for recruitment and contacting me about suitable opportunities.</span></label></div>
+          </div>
+          <button class="btn full" id="submit-btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Application</button>
+          <div id="form-notice" class="notice" role="status" aria-live="polite"></div>
+        </form>
+        <p class="privacy">Your application is intended for DigiCafe recruitment review. Please do not submit passwords, OTPs or unrelated sensitive documents.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap"><span>© <span id="year"></span> DigiCafe – Finance &amp; Compliance Services</span><a href="index.html">Back to DigiCafe</a></div></footer>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+    import { getFirestore, collection, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+    import { getStorage, ref, uploadBytes, deleteObject } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDcdR-ba5Lh-DfG-wuABRntQm1sSYSr3Kk",
+      authDomain: "digicafe-ee519.firebaseapp.com",
+      projectId: "digicafe-ee519",
+      storageBucket: "digicafe-ee519.firebasestorage.app",
+      messagingSenderId: "582268562769",
+      appId: "1:582268562769:web:720288e24fd8de7166f770",
+      measurementId: "G-25T4WHH8X4"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const storage = getStorage(app);
+    const form = document.getElementById('career-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const notice = document.getElementById('form-notice');
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const allowedTypes = ['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    const allowedExtensions = ['pdf','doc','docx'];
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      notice.className = 'notice';
+      notice.textContent = '';
+
+      const file = document.getElementById('resume').files[0];
+      if (!file) return showError('Please attach your resume.');
+      const extension = (file.name.split('.').pop() || '').toLowerCase();
+      if (!allowedExtensions.includes(extension)) return showError('Please upload a PDF, DOC or DOCX resume.');
+      if (file.size > 5 * 1024 * 1024) return showError('Resume must be 5 MB or smaller.');
+      if (file.size === 0) return showError('The selected resume file is empty.');
+
+      const mime = file.type || (extension === 'pdf' ? 'application/pdf' : extension === 'doc' ? 'application/msword' : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      if (!allowedTypes.includes(mime)) return showError('The selected file type is not supported.');
+
+      const values = Object.fromEntries(new FormData(form).entries());
+      const applicationRef = doc(collection(db, 'careerApplications'));
+      const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_').slice(-100);
+      const resumePath = 'career-resumes/' + applicationRef.id + '/' + safeName;
+      const storageRef = ref(storage, resumePath);
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Uploading and submitting...';
+      try {
+        await uploadBytes(storageRef, file, { contentType: mime, customMetadata: { applicationId: applicationRef.id } });
+        await setDoc(applicationRef, {
+          fullName: String(values.fullName || '').trim(),
+          mobile: String(values.mobile || '').trim(),
+          email: String(values.email || '').trim(),
+          city: String(values.city || '').trim(),
+          state: String(values.state || '').trim(),
+          qualification: String(values.qualification || '').trim(),
+          experience: String(values.experience || '').trim(),
+          position: String(values.position || '').trim(),
+          workMode: String(values.workMode || '').trim(),
+          hours: String(values.hours || '').trim(),
+          salary: String(values.salary || '').trim(),
+          notice: String(values.notice || '').trim(),
+          introduction: String(values.introduction || '').trim(),
+          resumeName: file.name,
+          resumePath,
+          resumeSize: file.size,
+          resumeType: mime,
+          status: 'New',
+          source: 'DigiCafe Careers Website',
+          createdAt: serverTimestamp()
+        });
+
+        try {
+          const mailRef = doc(collection(db, 'mail'));
+          await setDoc(mailRef, {
+            to: ['digicafe.admin@gmail.com'],
+            message: {
+              subject: 'New DigiCafe Career Application - ' + String(values.fullName || '').trim(),
+              text: 'A new career application has been received.\n\nReference: ' + applicationRef.id +
+                '\nName: ' + values.fullName + '\nPosition: ' + values.position +
+                '\nMobile: ' + values.mobile + '\nEmail: ' + values.email +
+                '\nLocation: ' + values.city + ', ' + values.state +
+                '\nExperience: ' + values.experience +
+                '\nResume: Available in DigiCafe Admin Portal > Career Applications.'
+            },
+            createdAt: serverTimestamp()
+          });
+        } catch (mailError) {
+          console.warn('Application saved, but notification email could not be queued:', mailError);
+        }
+
+        form.reset();
+        notice.className = 'notice ok';
+        notice.textContent = 'Your application has been submitted successfully. Reference ID: ' + applicationRef.id + '. DigiCafe will contact you if your profile matches an opportunity.';
+      } catch (error) {
+        console.error('Career application submission failed:', error);
+        try { await deleteObject(storageRef); } catch (cleanupError) { console.warn('Resume cleanup skipped:', cleanupError); }
+        showError('We could not submit your application. Please try again later or contact DigiCafe on WhatsApp. (' + (error.code || 'submission-error') + ')');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Application';
+      }
+    });
+
+    function showError(message) {
+      notice.className = 'notice err';
+      notice.textContent = message;
+    }
+  </script>
+</body>
+</html>
