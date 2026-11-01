@@ -344,7 +344,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px
         consent: true, consentText: 'DigiCafe monthly email newsletter',
         consentSource: source, consentAt: serverTimestamp(),
         status: 'subscribed', updatedAt: serverTimestamp()
-      }, { merge: true });
+      });
       form.reset();
       if (status) status.textContent = 'Subscription saved. Thank you for subscribing to DigiCafe updates.';
       localStorage.setItem('digicafeNewsletterDismissed', '1');
