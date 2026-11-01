@@ -339,8 +339,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px
     if (button) { button.disabled = true; button.textContent = 'Subscribing…'; }
     if (status) status.textContent = '';
     try {
-      const subscriberId = encodeURIComponent(email);
-      await setDoc(doc(db, 'newsletterSubscribers', subscriberId), {
+      await addDoc(collection(db, 'newsletterSubscribers'), {
         email, name, channel: 'email', frequency: 'monthly',
         consent: true, consentText: 'DigiCafe monthly email newsletter',
         consentSource: source, consentAt: serverTimestamp(),
