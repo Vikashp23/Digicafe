@@ -73,146 +73,30 @@
       </aside>
 
       <section class="panel">
-        <h2>Submit your application</h2>
-        <p class="sub">Complete the form and attach your latest resume. All fields marked * are required.</p>
-        <form id="career-form">
-          <div class="grid">
-            <div class="field"><label for="fullName">Full name *</label><input id="fullName" name="fullName" maxlength="100" required autocomplete="name" placeholder="Your full name"></div>
-            <div class="field"><label for="mobile">Mobile number *</label><input id="mobile" name="mobile" type="tel" maxlength="20" required autocomplete="tel" placeholder="+91 98765 43210"></div>
-            <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" maxlength="120" required autocomplete="email" placeholder="you@example.com"></div>
-            <div class="field"><label for="city">Current city *</label><input id="city" name="city" maxlength="80" required placeholder="City"></div>
-            <div class="field"><label for="state">State *</label><input id="state" name="state" maxlength="80" required placeholder="State"></div>
-            <div class="field"><label for="qualification">Highest qualification *</label><input id="qualification" name="qualification" maxlength="120" required placeholder="e.g. MBA, B.Com, M.Com"></div>
-            <div class="field"><label for="experience">Work experience *</label><select id="experience" name="experience" required><option value="">Select experience</option><option>Fresher</option><option>Less than 1 year</option><option>1–2 years</option><option>3–5 years</option><option>6–8 years</option><option>More than 8 years</option></select></div>
-            <div class="field"><label for="position">Position applying for *</label><select id="position" name="position" required><option value="">Select position</option><option>Marketing &amp; Business Development Associate</option><option>Accounts &amp; GST Assistant</option><option>Digital Marketing Intern</option><option>General Application / Future Opportunities</option></select></div>
-            <div class="field"><label for="workMode">Preferred work arrangement *</label><select id="workMode" name="workMode" required><option value="">Select preference</option><option>Remote</option><option>Hybrid</option><option>On-site</option><option>Flexible / Any</option></select></div>
-            <div class="field"><label for="hours">Availability</label><select id="hours" name="hours"><option value="">Select availability</option><option>2 hours/day</option><option>3–4 hours/day</option><option>Part-time</option><option>Full-time</option><option>Flexible</option></select></div>
-            <div class="field"><label for="salary">Expected monthly salary (₹)</label><input id="salary" name="salary" maxlength="30" placeholder="e.g. 5000 / Negotiable"></div>
-            <div class="field"><label for="notice">Notice period / joining availability</label><input id="notice" name="notice" maxlength="80" placeholder="Immediate / 15 days / 30 days"></div>
-            <div class="field full"><label for="introduction">Brief introduction / relevant skills</label><textarea id="introduction" name="introduction" maxlength="1000" placeholder="Tell us about your skills, experience and why you are interested in DigiCafe."></textarea></div>
-            <div class="field full"><label for="resume">Upload resume * (PDF or DOC/DOCX, maximum 5 MB)</label><input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required><span class="hint">Use a clear, updated resume. Do not upload Aadhaar, PAN or other identity documents.</span></div>
-            <div class="field full"><label class="consent"><input id="consent" type="checkbox" required><span>I confirm that the information provided is accurate and consent to DigiCafe using my application details and resume for recruitment and contacting me about suitable opportunities.</span></label></div>
-          </div>
-          <button class="btn full" id="submit-btn" type="submit"><i class="fa-solid fa-paper-plane"></i> Submit Application</button>
-          <div id="form-notice" class="notice" role="status" aria-live="polite"></div>
-        </form>
-        <p class="privacy">Your application is intended for DigiCafe recruitment review. Please do not submit passwords, OTPs or unrelated sensitive documents.</p>
+        <h2>Apply for a DigiCafe Opportunity</h2>
+        <p class="sub">Submit your profile through our secure Google Form. Your responses will be recorded for manual review by the DigiCafe team.</p>
+        <div style="padding:18px;border:1px solid rgba(19,198,162,.3);border-radius:14px;background:rgba(19,198,162,.07);margin:18px 0">
+          <h3 style="margin:0 0 8px;font-size:1rem">Before you apply</h3>
+          <ul style="margin:0;padding-left:20px;color:var(--muted);font-size:.88rem">
+            <li>Keep your contact details and qualification ready.</li>
+            <li>Provide accurate information about your skills and experience.</li>
+            <li>Add a resume or portfolio link if requested in the form.</li>
+            <li>DigiCafe will review applications and contact suitable applicants.</li>
+          </ul>
+        </div>
+        <a class="btn full" href="https://forms.gle/u6PDLRgCTLcPJfVY9" target="_blank" rel="noopener noreferrer">
+          <i class="fa-solid fa-file-pen"></i> Open Career Application Form
+        </a>
+        <p class="privacy">Submitting an application does not guarantee an interview, selection or employment. Your details will be used for DigiCafe recruitment review. Please do not submit passwords, OTPs or unrelated sensitive documents.</p>
+        <p class="privacy">Prefer to speak with us? <a href="https://wa.me/918539979271?text=Hi%20DigiCafe%2C%20I%20have%20a%20question%20about%20career%20opportunities." target="_blank" rel="noopener noreferrer">Contact DigiCafe on WhatsApp</a>.</p>
       </section>
     </section>
   </main>
 
   <footer class="footer"><div class="wrap"><span>© <span id="year"></span> DigiCafe – Finance &amp; Compliance Services</span><a href="index.html">Back to DigiCafe</a></div></footer>
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-    import { getFirestore, collection, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
-    import { getStorage, ref, uploadBytes, deleteObject } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyDcdR-ba5Lh-DfG-wuABRntQm1sSYSr3Kk",
-      authDomain: "digicafe-ee519.firebaseapp.com",
-      projectId: "digicafe-ee519",
-      storageBucket: "digicafe-ee519.firebasestorage.app",
-      messagingSenderId: "582268562769",
-      appId: "1:582268562769:web:720288e24fd8de7166f770",
-      measurementId: "G-25T4WHH8X4"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const storage = getStorage(app);
-    const form = document.getElementById('career-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const notice = document.getElementById('form-notice');
+  <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    const allowedTypes = ['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
-    const allowedExtensions = ['pdf','doc','docx'];
-
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      notice.className = 'notice';
-      notice.textContent = '';
-
-      const file = document.getElementById('resume').files[0];
-      if (!file) return showError('Please attach your resume.');
-      const extension = (file.name.split('.').pop() || '').toLowerCase();
-      if (!allowedExtensions.includes(extension)) return showError('Please upload a PDF, DOC or DOCX resume.');
-      if (file.size > 5 * 1024 * 1024) return showError('Resume must be 5 MB or smaller.');
-      if (file.size === 0) return showError('The selected resume file is empty.');
-
-      const mime = file.type || (extension === 'pdf' ? 'application/pdf' : extension === 'doc' ? 'application/msword' : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
-      if (!allowedTypes.includes(mime)) return showError('The selected file type is not supported.');
-
-      const values = Object.fromEntries(new FormData(form).entries());
-      const applicationRef = doc(collection(db, 'careerApplications'));
-      const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, '_').slice(-100);
-      const resumePath = 'career-resumes/' + applicationRef.id + '/' + safeName;
-      const storageRef = ref(storage, resumePath);
-
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Uploading and submitting...';
-      try {
-        await uploadBytes(storageRef, file, { contentType: mime, customMetadata: { applicationId: applicationRef.id } });
-        await setDoc(applicationRef, {
-          fullName: String(values.fullName || '').trim(),
-          mobile: String(values.mobile || '').trim(),
-          email: String(values.email || '').trim(),
-          city: String(values.city || '').trim(),
-          state: String(values.state || '').trim(),
-          qualification: String(values.qualification || '').trim(),
-          experience: String(values.experience || '').trim(),
-          position: String(values.position || '').trim(),
-          workMode: String(values.workMode || '').trim(),
-          hours: String(values.hours || '').trim(),
-          salary: String(values.salary || '').trim(),
-          notice: String(values.notice || '').trim(),
-          introduction: String(values.introduction || '').trim(),
-          resumeName: file.name,
-          resumePath,
-          resumeSize: file.size,
-          resumeType: mime,
-          status: 'New',
-          source: 'DigiCafe Careers Website',
-          createdAt: serverTimestamp()
-        });
-
-        try {
-          const mailRef = doc(collection(db, 'mail'));
-          await setDoc(mailRef, {
-            to: ['digicafe.admin@gmail.com'],
-            message: {
-              subject: 'New DigiCafe Career Application - ' + String(values.fullName || '').trim(),
-              text: 'A new career application has been received.\n\nReference: ' + applicationRef.id +
-                '\nName: ' + values.fullName + '\nPosition: ' + values.position +
-                '\nMobile: ' + values.mobile + '\nEmail: ' + values.email +
-                '\nLocation: ' + values.city + ', ' + values.state +
-                '\nExperience: ' + values.experience +
-                '\nResume: Available in DigiCafe Admin Portal > Career Applications.'
-            },
-            createdAt: serverTimestamp()
-          });
-        } catch (mailError) {
-          console.warn('Application saved, but notification email could not be queued:', mailError);
-        }
-
-        form.reset();
-        notice.className = 'notice ok';
-        notice.textContent = 'Your application has been submitted successfully. Reference ID: ' + applicationRef.id + '. DigiCafe will contact you if your profile matches an opportunity.';
-      } catch (error) {
-        console.error('Career application submission failed:', error);
-        try { await deleteObject(storageRef); } catch (cleanupError) { console.warn('Resume cleanup skipped:', cleanupError); }
-        showError('We could not submit your application. Please try again later or contact DigiCafe on WhatsApp. (' + (error.code || 'submission-error') + ')');
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Application';
-      }
-    });
-
-    function showError(message) {
-      notice.className = 'notice err';
-      notice.textContent = message;
-    }
   </script>
 </body>
 </html>
