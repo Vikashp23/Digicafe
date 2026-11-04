@@ -175,7 +175,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--txt);line-h
 
 /* FOOTER */
 footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px}
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:3rem}
+.foot-grid{display:grid;grid-template-columns:2fr repeat(4,minmax(0,1fr));gap:2rem;margin-bottom:3rem}
 .foot-col h4{font-size:.78rem;font-weight:700;color:var(--txt3);text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem}
 .foot-col a{display:block;color:var(--txt2);text-decoration:none;font-size:.83rem;padding:.28rem 0;cursor:pointer;transition:color .2s}
 .foot-col a:hover{color:var(--txt)}
@@ -1719,7 +1719,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px
     <div class="foot-grid">
       <div>
         <div class="logo s" style="font-size:1.3rem">DigiCafe</div>
-        <p style="font-size:.85rem;color:var(--txt2);margin:1rem 0">India's #1 AI-Powered Tax & Compliance Platform. Our Service, Your Solution.</p>
+        <p style="font-size:.85rem;color:var(--txt2);margin:1rem 0">Tax, accounting and business compliance support in India. Clear guidance, transparent scope and practical assistance.</p>
         <div style="display:flex;gap:.75rem">
           <button class="btn btn-primary btn-sm" onclick="showPage('login')"><i class="fas fa-phone"></i> Support</button>
           <a href="https://wa.me/918539979271" target="_blank" class="btn btn-sm" style="background:#25D366;color:#fff"><i class="fab fa-whatsapp"></i> WhatsApp</a>
@@ -1744,8 +1744,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px
         <a onclick="showPage('home')">About Us</a>
         <a href="https://forms.gle/qrjWPZEvHohxQqDT9" target="_blank" rel="noopener">Collaborate With Us</a>
         <a onclick="showPage('home')">Contact</a>
-        <a onclick="showPage('home')">Privacy</a>
-        <a onclick="showPage('home')">Terms</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
       </div>
       <div>
         <h4>DigiCafe Newsletter</h4>
@@ -1754,7 +1754,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px
       </div>
     </div>
     <div class="foot-bottom">
-      <p>© 2025 DigiCafe Compliance & Digital Solutions · MSME: UDYAM-KR-02-0041919</p>
+      <p>© <span id="digicafe-year">2026</span> DigiCafe Compliance & Digital Solutions · MSME: UDYAM-KR-02-0041919</p>
       <p>By Vikash Pathak · Bengaluru, India · <a href="mailto:digicafe.admin@gmail.com" style="color:var(--blue2)">digicafe.admin@gmail.com</a> · <a onclick="showPage('admin');showAdmin('news')" style="color:var(--txt3);cursor:pointer" title="Admin sign-in required">Admin</a></p>
     </div>
   </div>
@@ -2764,5 +2764,6 @@ function sendRequestOnWhatsApp(){
 
 <!-- Company Search module -->
 <script src="modules/company-search.js"></script>
+<script>document.getElementById("digicafe-year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
