@@ -181,6 +181,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px
 .foot-col a:hover{color:var(--txt)}
 .foot-bottom{border-top:1px solid var(--bdr);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .foot-bottom p{font-size:.8rem;color:var(--txt3)}
+@media(max-width:900px){.foot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.foot-grid>div:first-child{grid-column:1/-1}}
+@media(max-width:560px){.foot-grid{grid-template-columns:1fr}.foot-grid>div:first-child{grid-column:auto}}
 
 /* TOAST */
 #toast{position:fixed;bottom:2rem;right:2rem;z-index:9999;background:var(--bg3);border:1px solid var(--bdr2);border-radius:var(--r);padding:.75rem 1.25rem;font-size:.88rem;box-shadow:0 8px 32px rgba(0,0,0,.5);transform:translateX(120%);transition:transform .3s}
@@ -786,11 +788,11 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px
     <div class="c">
       <div class="hero-inner">
         <div>
-          <span class="badge badge-blue" style="margin-bottom:1rem">🇮🇳 #1 in India</span>
-          <h1>India's #1 AI-Powered<br><span class="g-text">Tax & Compliance</span><br>Platform</h1>
-          <p>File ITR, register for GST, incorporate companies, manage TDS — all with AI assistance, real-time tracking, and expert support.</p>
+          <span class="badge badge-blue" style="margin-bottom:1rem">Tax · Accounting · Compliance</span>
+          <h1>Practical Support for<br><span class="g-text">Tax, Accounting &amp;</span><br>Business Compliance</h1>
+          <p>Get practical assistance with Income Tax, GST, TDS, accounting, business registrations and compliance documentation. Scope, fees and next steps are confirmed before work begins.</p>
           <div style="display:flex;gap:1rem;flex-wrap:wrap">
-            <button class="btn btn-primary btn-lg" onclick="showPage('login')"><i class="fas fa-rocket"></i> Start Free</button>
+            <button class="btn btn-primary btn-lg" onclick="showPage('services')"><i class="fas fa-th"></i> Explore Services</button>
             <button class="btn btn-ghost btn-lg" onclick="showPage('services')"><i class="fas fa-th"></i> Explore</button>
             <a href="https://wa.me/918539979271" target="_blank" class="btn btn-lg" style="background:#25D366;color:#fff"><i class="fab fa-whatsapp"></i> WhatsApp</a>
           </div>
@@ -1791,12 +1793,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px
 <script>
 // ═══ DATA ═══
 const news = [
-  {title:'Union Budget 2025: No Income Tax Change for Salaried Employees',date:'15 Jan 2025',cat:'Income Tax',desc:'Finance Ministry confirms standard deduction remains at ₹50,000 for FY 2025-26.'},
-  {title:'GST Extension on Textiles Extended Till March 2025',date:'14 Jan 2025',cat:'GST',desc:'5% GST on specified textiles extended for 3 more months to boost exports.'},
-  {title:'CBDT Issues New Notification on ITR-1 for AY 2025-26',date:'13 Jan 2025',cat:'Income Tax',desc:'New appendix added for cryptoassets and foreign income reporting requirements.'},
-  {title:'GST Council Approves Reverse Charge Mechanism for Services',date:'12 Jan 2025',cat:'GST',desc:'New rules effective 1 April 2025 for specified B2B service transactions.'},
-  {title:'SEBI Issues New Guidelines for Mutual Fund Taxation',date:'11 Jan 2025',cat:'Income Tax',desc:'Updated FAQs on TDS, indexed cost, and capital gains treatment.'},
-  {title:'Company Law: New MCA Portal Features for Annual Compliance',date:'10 Jan 2025',cat:'Companies Act',desc:'Streamlined filing process for AOC-4, MGT-7 with auto-validation.'},
+  {title:'Prepare documents before filing an Income Tax Return',date:'Practical Guide',cat:'Income Tax',desc:'Keep PAN, income details, tax statements, bank details and eligible deduction records ready. Verify the applicable assessment year and current filing instructions on the official portal.'},
+  {title:'Reconcile books with GST records before filing',date:'Practical Guide',cat:'GST',desc:'Compare sales and purchase records with relevant GST statements, review mismatches and verify current return requirements on the GST portal before filing.'},
+  {title:'Check applicable MCA forms and due dates',date:'Practical Guide',cat:'MCA / ROC',desc:'Annual filing requirements depend on entity type, financial year and applicable rules. Confirm the latest forms, due dates and instructions on the MCA portal.'},
 ];
 
 // News priority:
