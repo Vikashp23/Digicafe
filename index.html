@@ -1771,16 +1771,18 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr);padding:60px 0 30px
 <div id="newsletter-modal" role="dialog" aria-modal="true" aria-labelledby="newsletter-modal-title">
   <div class="newsletter-modal-card">
     <button class="newsletter-modal-close" type="button" aria-label="Close newsletter signup" onclick="window.closeNewsletterPopup(true)">&times;</button>
-    <div class="badge badge-teal" style="margin-bottom:1rem">DIGICAFE MONTHLY UPDATES</div>
-    <h2 id="newsletter-modal-title" class="s" style="font-size:1.65rem;line-height:1.2;margin-bottom:.75rem">Stay informed. Stay compliant.</h2>
-    <p style="color:var(--txt2);font-size:.92rem">One useful monthly email with DigiCafe services, new tools, products, tax and compliance news, and important updates.</p>
-    <form id="newsletter-popup-form" onsubmit="return window.subscribeNewsletter(event,'popup')" style="margin-top:1.2rem">
-      <div class="newsletter-form"><input type="email" name="email" placeholder="Your email address" aria-label="Email address" required></div>
-      <div class="newsletter-form"><input type="text" name="name" placeholder="Name (optional)" aria-label="Name (optional)"></div>
-      <label class="newsletter-consent"><input type="checkbox" name="consent" required><span>I agree to receive DigiCafe's monthly email newsletter. I can unsubscribe at any time.</span></label>
-      <button class="btn btn-primary btn-full" type="submit">Subscribe to monthly updates</button>
-    </form>
-    <div id="newsletter-popup-status" class="newsletter-status" role="status" aria-live="polite"></div>
+    <div class="badge badge-teal" style="margin-bottom:1rem">DIGICAFE DAILY BRIEF</div>
+    <h2 id="newsletter-modal-title" class="s" style="font-size:1.65rem;line-height:1.2;margin-bottom:.75rem">Make every day a little more compliance-ready.</h2>
+    <p style="color:var(--txt2);font-size:.92rem;margin-bottom:.9rem">Subscribe to receive practical DigiCafe email updates, reminders and useful resources. Topics may include:</p>
+    <ul style="color:var(--txt2);font-size:.86rem;line-height:1.75;padding-left:1.2rem;margin-bottom:1rem">
+      <li><strong style="color:var(--txt)">GST:</strong> return reminders, due dates and filing tips</li>
+      <li><strong style="color:var(--txt)">Income Tax & TDS:</strong> tax updates, deadlines and practical guidance</li>
+      <li><strong style="color:var(--txt)">MCA / ROC:</strong> company and LLP forms, filings and compliance alerts</li>
+      <li><strong style="color:var(--txt)">Accounting & Excel:</strong> formulas, reconciliation and bookkeeping tips</li>
+      <li><strong style="color:var(--txt)">Business tools:</strong> registrations, useful resources and DigiCafe updates</li>
+    </ul>
+    <p style="color:var(--txt3);font-size:.78rem;margin-bottom:1rem">We aim to share useful updates regularly. The frequency may vary depending on important updates. No spam; unsubscribe at any time.</p>
+    <a class="btn btn-primary btn-full" href="https://forms.gle/LhxnpuAmMBbeMXps6" target="_blank" rel="noopener noreferrer">Subscribe to DigiCafe Newsletter</a>
     <button type="button" onclick="window.closeNewsletterPopup(true)" class="btn btn-ghost btn-full" style="margin-top:.6rem">Maybe later</button>
     <p style="font-size:.7rem;color:var(--txt3);margin-top:1rem">No spam. Your email will only be used for DigiCafe updates.</p>
   </div>
